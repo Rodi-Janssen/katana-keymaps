@@ -1,0 +1,19 @@
+Windows
+Instructions
+NOTE: All Windows binaries are compiled for x86-64 architectures only.
+
+Download kanata.exe. Optionally, download kanata.kbd. With the two files in the same directory, you can double-click the exe to start kanata. Kanata does not start a background process, so the window needs to stay open after startup. See this discussion for tips to run kanata in the background.
+
+You need to run kanata.exe via cmd or powershell to use a different configuration file:
+
+kanata.exe --cfg <cfg_file>
+
+NOTE: The kanata_winIOv2.exe variant contains an experimental breaking change that fixes an issue where the Windows LLHOOK+SendInput version of kanata does not handle defsrc consistently compared to other versions and other operating systems. This variant will be of interest to you for any of the following reasons:
+
+you are a new user
+you are a cross-platform user
+you use multiple language layouts within Windows and want kanata to handle the key positions consistently
+This variant contains the same output change as in the scancode variant below, and also changes the input to also operate on scancodes.
+
+cd C:\Users\rodij\Desktop\keymaps
+kanata.exe --cfg keymaps2.txt
