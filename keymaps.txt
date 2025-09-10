@@ -1,6 +1,6 @@
-;; Hold caps activates arrows layer
-
-(defsrc caps q w e r t y u i o p a s d f g h j k l z x c v b n m , spc ralt prtsc [ ')
-(defalias caps (tap-hold 200 200 caps (layer-while-held arrows)))
-(deflayer base   @caps  q w e r t y u i o p a s d f g h j k l z x c v b n m , spc bspc _ ' ')
-(deflayer arrows _ S-1 S-2 { } S-\ , 7 8 9 S-8 S-3 S-4 S-9 S-0 = . 4 5 6 S-7 S-6 [ ] S-` 1 2 3 0 ralt _ _ -)
+(defcfg process-unmapped-keys yes)
+(defsrc caps q w e r t y u i o p a s d f g h j k l z x c v b n m , spc ralt prtsc [ ' ;)
+(defalias caps (tap-hold 200 200 caps (layer-while-held caps)) ; (tap-hold 200 200 ; (layer-while-held scroll)))
+(deflayer base @caps q w e r t y u i o p a s d f g h j k l z x c v b n m , spc ralt prtsc [ ' @;)
+(deflayer caps _ S-1 S-2 { } S-\ , 7 8 9 S-8 S-3 S-4 S-9 S-0 = . 4 5 6 S-7 S-6 [ ] S-` 1 2 3 0 ralt _ _ - ;)
+(deflayer scroll _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ (mwheel-left 1 1) (mwheel-down 1 1) (mwheel-up 1 1) (mwheel-right 1 1) _ _ _ _ _ _ _ _ _ _ _ _ _ _)

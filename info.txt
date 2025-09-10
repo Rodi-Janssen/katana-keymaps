@@ -16,4 +16,4 @@ you use multiple language layouts within Windows and want kanata to handle the k
 This variant contains the same output change as in the scancode variant below, and also changes the input to also operate on scancodes.
 
 cd C:\Users\rodij\Desktop\keymaps
-kanata.exe --cfg keymaps2.txt
+kanata.exe --cfg keymaps.txt
